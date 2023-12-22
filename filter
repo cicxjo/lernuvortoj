@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+while($line = fgets(STDIN)) {
+    if (preg_match('/^#/', $line))
+        continue;
+
+    $line = trim($line);
+    $parts = explode("\t", $line);
+    $word = $parts[0];
+    $structure = $parts[1];
+    $translation = $parts[2];
+
+    printf("<b>%s</b> <small>%s</small>\t<p>%s</p>\n",
+        $word, $structure, $translation);
+}

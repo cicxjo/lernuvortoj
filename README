@@ -1,0 +1,57 @@
+This repository contains a script to generate a TSV file by retrieving
+translations from the dictionary on Lernu. Then, the file can be
+formatted using the filter and inserted into Anki.
+The Makefile automates file generation.
+
+Usage :
+
+	./script [language] < words.txt > tsv.txt 2>&1
+	./filter < tsv.txt > cards.txt
+
+Language codes (from Lernu):
+
+  - ar (العربية),
+  - bg (Български),
+  - ca (Català),
+  - cs (Česky),
+  - da (Dansk),
+  - de (Deutsch),
+  - el (Ελληνικά),
+  - en (English),
+  - es (Español),
+  - fa (فارسی),
+  - fi (Suomi),
+  - fr (Français),
+  - he (עברית),
+  - hi (हिन्दी),
+  - hr (Hrvatski),
+  - hsb (Hornjoserbsce),
+  - hu (Magyar),
+  - id (Bahasa Indonesia),
+  - it (Italiano),
+  - ja (日本語),
+  - lt (Lietuvių),
+  - nl (Nederlands),
+  - no (Norsk bokmål),
+  - pl (Polski),
+  - pt (Português),
+  - ro (Română),
+  - ru (Русский),
+  - sk (Slovenčina),
+  - sl (Slovenščina),
+  - sv (Svenska),
+  - sw (Kiswahili),
+  - th (ไทย),
+  - tl (Tagalog),
+  - tr (Türkçe),
+  - uk (Українська),
+  - vi (Tiếng Việt),
+  - zh-cn (简体中文),
+  - zh (中文),
+
+Please note that the dictionary is very limited for some languages.
+
+Dependencies:
+
+  - php
+  - php-curl
